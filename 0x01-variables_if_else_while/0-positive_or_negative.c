@@ -3,8 +3,7 @@
 #include <time.h>
 
 /**
- * main - Entry point of the program
- * Description: cheeck whether number is is positive or neagtive 
+ * main - Entry point of the program 
  * Return: 0 (success)
  */
 int main(void)

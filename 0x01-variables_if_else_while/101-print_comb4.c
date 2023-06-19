@@ -21,7 +21,7 @@ int main(void)
 				putchar(j + '0');
 				if (digit != 7 && digit != 8 && digit != 9)
 				{
-					putchar(';');
+					putchar(',');
 					putchar(' ');
 				}
 			}

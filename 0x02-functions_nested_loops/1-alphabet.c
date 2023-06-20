@@ -5,6 +5,9 @@
  * main - Entry point of the program
  * Return: 0 (success)
  */
+
+int _putchar(char i);
+void print_alphabet(void);
 int main(void)
 {
 	print_alphabet();

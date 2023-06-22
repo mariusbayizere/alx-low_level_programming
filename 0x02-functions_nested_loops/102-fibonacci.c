@@ -20,7 +20,7 @@ int main(void)
 		b = feb;
 		if (i != 50)
 		{
-			printf(" ,");
+			printf(", ");
 		}
 	}
 	printf("\n");

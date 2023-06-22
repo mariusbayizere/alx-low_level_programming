@@ -6,9 +6,9 @@
  */
 int main(void)
 {
-	int a = 1;
-	int b = 2;
-	int feb;
+	long long a = 1;
+	long long b = 2;
+	long long feb;
 	int i;
 	int n = 50;
 

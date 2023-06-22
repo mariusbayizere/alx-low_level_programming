@@ -14,7 +14,7 @@ int main(void)
 
 	for (i = 1; i <= n; i++)
 	{
-		printf("%d", a);
+		printf("%lld", a);
 		feb = a + b;
 		a = b;
 		b = feb;

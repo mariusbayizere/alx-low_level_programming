@@ -12,7 +12,7 @@ int main(void)
 	int i;
 	int n = 50;
 
-	for (i = 1; i <= n; i++)
+	for (i = 3; i <= n; i++)
 	{
 		printf("%lu ", a);
 		feb = a + b;

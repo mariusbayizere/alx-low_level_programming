@@ -6,15 +6,15 @@
  */
 int main(void)
 {
-	long long a = 1;
-	long long b = 2;
-	long long feb;
+	unsigned long long a = 1;
+	unsigned long long b = 2;
+	unsigned long long feb;
 	int i;
 	int n = 50;
 
 	for (i = 1; i <= n; i++)
 	{
-		printf("%lld", a);
+		printf("%llu ", a);
 		feb = a + b;
 		a = b;
 		b = feb;

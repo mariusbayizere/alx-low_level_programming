@@ -12,7 +12,7 @@ int main(void)
 	long int j;
 	long int high;
 
-	high = high - 1;
+	high = - 1;
 	while (number % 2 == 0)
 	{
 		high = 2;

@@ -18,6 +18,8 @@ void print_triangle(int size)
 	}
 	for (c = 0; c < size; c++)
 	{
+		for (k = 0; k < size -c - 1; k++)
+			_putchar(' ');
 		for (k = 0; k <= c; k++)
 			_putchar('#');
 		_putchar('\n');

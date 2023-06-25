@@ -8,27 +8,14 @@
  */
 int main(void)
 {
-	long int number = 612852475143;
-	long int j;
-	long int high;
+	unsigned long int number = 612852475143;
+	unsigned long int j;
 
-	high = - 1;
-	while (number % 2 == 0)
+	for (j = 3; j < 782849; j = j + 2)
 	{
-		high = 2;
-		number /= 2;
+		while ((number % j == 0) && (number != 1))
+			number = number / j;
 	}
-	for (j = 3; j <= sqrt(number); j = j + 2)
-	{
-		while (number % j == 0)
-		{
-			high = j;
-			number /= j;
-		}
-	}
-	if (number > 2)
-		high = number;
-	printf("%ld\n", high);
-
+	printf("%lu\n", number);
 	return (0);
 }

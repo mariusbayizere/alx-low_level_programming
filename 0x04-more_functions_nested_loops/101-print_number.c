@@ -6,6 +6,8 @@
  */
 void print_number(int n)
 {
+	unsigned long int f = n;
+
 	if (n == 0)
 	{
 		_putchar('0');
@@ -14,9 +16,9 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		f = -f;
 	}
-	if (n / 10)
-		print_number(n / 10);
-	_putchar((n % 10) + '0');
+	if (f / 10)
+		print_number(f / 10);
+	_putchar((f % 10) + '0');
 }

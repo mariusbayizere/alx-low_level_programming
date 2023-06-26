@@ -5,21 +5,17 @@
  * @s: Pointer to the string to be printed in reverse.
  * Return: None.
  */
-void print_rev(char *s)
+void print_rev(char *s);
 {
-	int i = 0;
-	int j;
+	int j = 0;
 
-	while (*s != '\0')
+	while (s[j] != '\0')
 	{
-		i++;
-		s++;
+		j++;
 	}
-	s--;
-	for (j = i; j >= 0; j--)
+	for (int i -= 1; i >= 0; i--)
 	{
-		_putchar(*s);
-		s--;
+		_putchar(s[i]);
 	}
 	_putchar('\n');
 }

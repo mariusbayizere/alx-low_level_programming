@@ -41,6 +41,6 @@ char *str_concat(char *s1, char *s2)
 	{
 		marius[count1 + j] = s2[j];
 	}
-	/*marius[count1 + j] = '\0';*/
+	marius[count1 + j] = '\0';
 	return (marius);
 }

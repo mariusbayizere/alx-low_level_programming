@@ -2,10 +2,12 @@
 #define DOG_H
 
 /**
- * struct dog -  user-defined structure that represents a dog.
- * @name: pointer to a character (char*) representing the name of the dog.
- * @float: floating-point number (float) representing the age of the dog.
- * @owner: pointer to a character (char*) representing the the dog's owner.
+ * struct dog - information about dog
+ * @name: First member
+ * @age: Second member
+ * @owner: Third member
+ *
+ * Description: Longer description
  */
 
 struct dog

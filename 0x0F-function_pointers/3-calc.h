@@ -4,7 +4,7 @@
 /**
  * struct op - Struct op
  *
- * @op: The pointer to the operator
+ * @p: The pointer to the operator
  * @f: The pointer to the function associated
  */
 typedef struct op

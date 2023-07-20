@@ -6,7 +6,6 @@
  * sum_them_all - Sums all the variable arguments passed to the function.
  * @n: The number of variable arguments.
  * @...: Variable number of arguments to be summed.
- *
  * Return: The sum of all the variable arguments.
  */
 int sum_them_all(const unsigned int n, ...)

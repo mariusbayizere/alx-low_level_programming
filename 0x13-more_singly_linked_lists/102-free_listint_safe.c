@@ -7,25 +7,35 @@
  * @h: Pointer to the head of the linked list.
  * Return: The element of the list that was freed.
  */
+
 size_t free_listint_safe(listint_t **h)
 {
-	size_t element = 0;
-	listint_t *marius;
-	listint_t *city;
+	size_t count = 0;
+	int x;
+	listint_t *ptr;
 
-	marius = *h;
-	while (marius != NULL)
+	if (h == NULL || *h == NULL)
 	{
-		element++;
-		city = marius->next;
-		free(marius);
-		marius = city;
-		if (marius && (size_t)marius <= element)
+		return (0);
+	}
+	while (*h != NULL)
+	{
+		x = *h - (*h)->next;
+		if (x > 0)
 		{
+			ptr = (*h)->next;
+			free(*h);
+			*h = ptr;
+			count++;
+		}
+		else
+		{
+			free(*h);
 			*h = NULL;
-			return (element);
+			count++;
+			break;
 		}
 	}
 	*h = NULL;
-	return (element);
+	return (count);
 }

@@ -2,52 +2,38 @@
 #include "lists.h"
 
 /**
- * free_list - Frees a linked list starting from a given node.
- * @head: Pointer to the starting node.
- * Return: The number of nodes freed.
- */
-size_t free_list(listint_t *head)
-{
-	size_t x = 0;
-	listint_t *temp;
-
-	while (head)
-	{
-		temp = head;
-		head = head->next;
-		free(temp);
-		x++;
-	}
-	return (x);
-}
-/**
- * free_listint_safe - Frees a listint_t linked list safely.
- * @h: Pointer to the head of the linked list.
- * Return: The number of nodes freed.
+ *free_listint_safe - Safely frees a listint_t linked list.
+ *@h: A pointer to a pointer to the head of the listint_t linked list.
+ *Return: The number of nodes freed from the linked list.
  */
 size_t free_listint_safe(listint_t **h)
 {
-	listint_t *pointer, *ptr, *temp;
+	size_t node = 0;
+	int current;
+	listint_t *ptr;
 
-	if (!h || !*h)
-		return (0);
-	pointer = *h;
-	ptr = (*h)->next;
-	while (ptr && ptr->next)
+	if (h == NULL || *h == NULL)
 	{
-		if (pointer == ptr)
-		{
-			temp = pointer;
-			pointer = *h;
-			while (pointer != temp)
-			{
-				pointer = pointer->next;
-				temp = temp->next;
-			}
-			return (free_list(pointer));
-		}
-		pointer = pointer->next;
-		ptr = ptr->next->next;
+		return (0);
 	}
-	return (free_list(*h));
+	while (*h != NULL)
+	{
+		current = *h - (*h)->next;
+		if (current > 0)
+		{
+			ptr = (*h)->next;
+			free(*h);
+			*h = ptr;
+			node++;
+		}
+		else
+		{
+			free(*h);
+			*h = NULL;
+			node++;
+			break;
+		}
+	}
+	*h = NULL;
+	return (node);
 }

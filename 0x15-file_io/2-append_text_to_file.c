@@ -25,7 +25,7 @@ int append_text_to_file(const char *filename, char *text_content)
 			i++;
 		}
 	}
-	temp = open("filename", O_WRONLY | O_APPEND);
+	temp = open(filename, O_WRONLY | O_APPEND);
 	stoke = write(temp, text_content, i);
 		if (temp == -1 || stoke == -1)
 		{

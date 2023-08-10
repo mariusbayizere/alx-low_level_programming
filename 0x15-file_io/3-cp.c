@@ -32,9 +32,9 @@ int main(int n, char *argv[])
 	int cursor, ptr, x, y;
 	char *temp;
 
-	if (n > 2)
+	if (n != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	temp = allocate_memory(argv[2]);
